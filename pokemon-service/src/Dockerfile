@@ -15,4 +15,4 @@ RUN pip install -r requirements.txt
 
 COPY . ./code/
 
-ENTRYPOINT python app/main.py
+ENTRYPOINT python pokemon-service/src/main.py

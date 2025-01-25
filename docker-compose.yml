@@ -1,14 +1,14 @@
 version: '3.9'
 
 services:
-  api:
-    build: ./app
+  pokemon-service:
+    build: ./pokemon-service/src
     volumes:
       - .:/code
     ports:
       - '8000:8000'
     environment:
-      - DB_URL=mongodb://db/users
+      - DB_URL=mongodb://db/pokemon
     depends_on:
       - db
   db:
@@ -16,8 +16,8 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - monpay:/data/db
+      - t1-volume:/data/db
 
 
 volumes:
-    monpay:
+    t1-volume:

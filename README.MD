@@ -1,6 +1,6 @@
-# Banpay backend challenge
+# T1 Examen técnico.
 
-_Enrique Velasco Jimenez: Banpay backend challenge using fastAPI + MongoDB + Docker_
+_Enrique Velasco Jimenez: T1 backend challenge using fastAPI + MongoDB + Docker_
 
 ## Comenzando 🚀
 
