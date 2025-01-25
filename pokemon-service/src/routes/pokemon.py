@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Body
 from fastapi.encoders import jsonable_encoder
 from fastapi.security import HTTPBearer
-#from server.auth.auth_bearer import JWTBearer
+from helpers.auth_bearer import JWTBearer
 from services.pokemon import (
     retrieve_pokemons,
     retrieve_pokemon,
@@ -23,7 +23,7 @@ security = HTTPBearer()
 
 
 # ------ All endpoints ----------
-@router.get("/pokemons") #Retrieve data from external API
+@router.get("/pokemons", dependencies=[Depends(JWTBearer())]) #Retrieve data from external API
 async def get_pokemons():
     try:
         pokemons = retrieve_pokemons() ## Call the retrieve pokemons service
@@ -34,7 +34,7 @@ async def get_pokemons():
     except:
         return ErrorResponse("No service available")
 
-@router.get("/pokemons/internal") #Retrieve data from the internal DB
+@router.get("/pokemons/internal", dependencies=[Depends(JWTBearer())]) #Retrieve data from the internal DB
 async def get_pokemons():
     try:
         pokemons = await retrieve_internal_pokemons() ## Call the retrieve pokemons service
@@ -46,7 +46,7 @@ async def get_pokemons():
         return ErrorResponse("No service available")
 
 
-@router.get("/pokemon/{id}") #Retrieve a pokemon by id. If not exists saves it in the ineternal DB
+@router.get("/pokemon/{id}", dependencies=[Depends(JWTBearer())]) #Retrieve a pokemon by id. If not exists saves it in the ineternal DB
 async def get_pokemon(id):
     if(not validate_id(id)): # Validate the id beteween 1 and 10
         return ErrorResponse("Invalid ID. It needs to be beteween 1 and 10") 
