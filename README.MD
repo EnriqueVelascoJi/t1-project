@@ -78,6 +78,12 @@ _Ejecuta el comando para correr la aplicación de Go_
 go run main.go
 ```
 
+_Ahora puedes ver el proyecto desplegado en la sigueinte liga_
+
+```
+http://localhost:8003/
+```
+
 _DOCUMENTACIÓN DE LOS 2 ENDPOINTS_
 ```
 POST localhost:8003/users/signup
@@ -103,11 +109,7 @@ Payload_example: {
 ![alt text](assets-docs/imgs/endpoint2.png)
 
 
-_Ahora puedes ver el proyecto desplegado en la sigueinte liga_
 
-```
-http://localhost:8003/
-```
 
 ## Explicación 🚀
 
