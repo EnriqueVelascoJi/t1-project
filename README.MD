@@ -22,26 +22,25 @@ _Para ejectura el proyecto sigue los pasos que a continuación se te muestran_
 _Clona el proyecto de github_
 
 ```
-git clone https://github.com/EnriqueVelascoJi/banpay-users-api.git
+git clone https://github.com/EnriqueVelascoJi/t1-project.git
 ```
 
 _Accede a la cerptea_
 
 ```
-cd banpay-users-api
+cd t1-project
 ```
 
 _Crear un archivo .env derivado de una copia de .env.example en el directorio raíz_
 
 ```
-copy .env.example .env
+cp .env.example .env
 ```
 
-_Ejecuta los siguientes comandos de Docker_
+_Ejecuta la aplicación en Docker_
 
 ```
-docker-compose build
-docker-compose up -d
+docker-compose up --build
 ```
 
 
