@@ -1,6 +1,8 @@
 # T1 Examen técnico.
 
-_Enrique Velasco Jimenez: T1 backend challenge using fastAPI + MongoDB + Docker_
+_Enrique Velasco Jimenez: T1 backend challenge using fastAPI + MongoDB + Docker + GoLang:_
+_Aqruitectura basada en Microservicios_
+
 
 ## Comenzando 🚀
 
@@ -54,7 +56,21 @@ _Para ver la documentación de la API_
 
 ```
 http://localhost:8000/docs
+
 ```
+
+## Explicación 🚀
+
+_A continuación se explica la arquitectura del proyecto._
+_Modelo de arrquitectura 1_
+El modelo de ar1uitectura 1 define un microservicio API creado con FastAPI - Python y JWT para la autenticación y autorización, accediendo al microservicio de la DB (Mongo DB) donde se almacena la información de los usarios y los pokemones
+![alt text](assets-docs/imgs/arquitectura1.png)
+
+
+_Modelo de arrquitectura 2_
+El modelo de arquitectura 2 define un microservicio API creado con FastAPI - Python donde se encuntra los endpoints de la pokemon API, en este caso se agerga un nuevo microservico de autenciación JWT realizado en Go para la autenticación y autorización (fuera del contenedor de Docker), accediendo al microservicio de la DB (Mongo DB) donde se almacena la información de los usarios y los pokemones
+![alt text](assets-docs/imgs/arquitectura2.png)
+
 
 ## Ver video DEMO 
 
