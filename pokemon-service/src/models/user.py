@@ -14,15 +14,3 @@ class UserModel(BaseModel):
                 "password": "password1234$"
             }
         }
-
-class UserLoginModel(BaseModel):
-    email: EmailStr = Field(...)
-    password: str = Field(...)
-
-    class Config:
-        json_schema_extra = {
-            "example": {
-                "email": "enrique.velasco@gmail.com",
-                "password": "password1234$"
-            }
-        }

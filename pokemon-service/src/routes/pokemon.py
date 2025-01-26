@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Body
 from fastapi.encoders import jsonable_encoder
 from fastapi.security import HTTPBearer
-from helpers.auth_bearer import JWTBearer
+from middleware.auth_bearer import JWTBearer
 from services.pokemon import (
     retrieve_pokemons,
     retrieve_pokemon,

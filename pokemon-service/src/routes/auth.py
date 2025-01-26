@@ -31,14 +31,8 @@ async def create_user(user: UserModel = Body(...)):
     user = jsonable_encoder(user)
     new_user = await add_user(user)
     token = create_access_token({'full_name': user['full_name'],'email': user['email']})
-    response = {'"access_token"': token, 'data': new_user }
+    response = {'access_token': token, 'data': new_user }
     return RetrieveResponse(response, "User created")
 
-@router.post("/user/signin") # SignInuser saved in the DB
-async def create_user(user: UserModel = Body(...)):
-    user = jsonable_encoder(user)
-    new_user = await add_user(user)
-    token = create_access_token({'full_name': user['full_name'],'email': user['email']})
-    response = {'"access_token"': token, 'data': new_user }
-    return RetrieveResponse(response, "User created")
+
 

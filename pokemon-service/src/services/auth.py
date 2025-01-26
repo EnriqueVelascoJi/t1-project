@@ -14,7 +14,6 @@ def validate_access_token(token: str):
     try:
     
         decoded_token = jwt.decode(token, f"{SECRET_KEY}", algorithms=["HS256"])
-        print(decoded_token)
         return decoded_token
     except:
         return {}

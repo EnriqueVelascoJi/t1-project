@@ -4,3 +4,12 @@ __pycache__
 .vscode
 .idea
 .env
+
+# Go workspace file
+go.work
+go.work.sum
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
